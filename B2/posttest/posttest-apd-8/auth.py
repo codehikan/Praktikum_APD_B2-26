@@ -19,7 +19,7 @@ def tambah_anggota():
         print("Anggota berhasil ditambahkan!")
 
 
-# ---------- READ ----------
+
 def lihat_anggota():
     print("\n--- DAFTAR SEMUA ANGGOTA ---")
     tampilan.tampilkan_anggota(anggota)
@@ -36,7 +36,7 @@ def cari_anggota():
     tampilan.tampilkan_anggota(hasil)
 
 
-# ---------- UPDATE ----------
+
 def ubah_anggota():
     print("\n--- UBAH DATA ANGGOTA ---")
     try:
@@ -69,7 +69,7 @@ def ubah_anggota():
         print("-" * 50)
 
 
-# ---------- DELETE ----------
+
 def hapus_anggota():
     print("\n--- HAPUS ANGGOTA ---")
     try:
