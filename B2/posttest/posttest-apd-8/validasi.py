@@ -1,14 +1,10 @@
-# validasi.py - semua input dari pengguna beserta pengecekannya (error handling)
-
 from data import ROLE, anggota
 
 
-# ---------- FUNGSI DENGAN PARAMETER ----------
 def minta_angka(pesan, batas):
-    # Meminta angka 1 sampai batas, diulang sampai input benar
     while True:
         try:
-            angka = int(input(pesan))                  # [Lokal] angka
+            angka = int(input(pesan))                  
             if angka < 1 or angka > batas:
                 raise ValueError
         except ValueError:
@@ -17,21 +13,18 @@ def minta_angka(pesan, batas):
             return angka
 
 
-# ---------- FUNGSI TANPA PARAMETER ----------
 def pilih_role():
-    # Menampilkan pilihan role (tuple ROLE) lalu mengembalikan role yang dipilih
     print("\nPilihan role:")
-    for i in range(len(ROLE)):                         # [Lokal] i
+    for i in range(len(ROLE)):                         
         print(str(i + 1) + ".", ROLE[i])
-    nomor = minta_angka("Pilih nomor role: ", len(ROLE))   # [Lokal] nomor
+    nomor = minta_angka("Pilih nomor role: ", len(ROLE))   
     return ROLE[nomor - 1]
 
 
 def minta_nama_baru():
-    # Meminta nama anggota baru: tidak boleh kosong dan tidak boleh kembar
     while True:
         try:
-            nama = input("Nama anggota: ").strip()     # [Lokal] nama
+            nama = input("Nama anggota: ").strip()     
             if nama == "":
                 raise ValueError("Nama tidak boleh kosong!")
             if nama in anggota:
