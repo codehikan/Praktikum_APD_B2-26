@@ -11,7 +11,6 @@ def hitung_role(daftar, role_dicari):
     return hitung_role(daftar[1:], role_dicari)
 
 
-# ---------- PROSEDUR ----------
 def lihat_statistik():
     print("\n--- JUMLAH ANGGOTA PER ROLE ---")
     daftar_data = list(anggota.values())              
